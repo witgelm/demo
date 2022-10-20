@@ -1,5 +1,6 @@
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
     kotlin("jvm")
     id("org.jetbrains.compose")
@@ -17,6 +18,7 @@ project.tasks.withType<KotlinCompile> {
 
 dependencies {
     implementation(compose.desktop.currentOs)
+    implementation("org.json:json:20220924")
 }
 
 compose.desktop {
